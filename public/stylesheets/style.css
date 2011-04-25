@@ -1,0 +1,76 @@
+body {
+	margin-left: 25%;
+	margin-top: 50px;
+	color: #000;
+	background-color: #ffffff;
+	width: 50%;
+}
+
+
+p {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 60px;
+	font-weight: 800;
+	color: #000;
+	line-height: 60px;
+	text-transform: uppercase;
+}
+
+dt {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 60px;
+	font-weight: 800;
+	color: #000;	
+	line-height: 60px;
+	text-transform: uppercase;
+}
+
+dl {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 60px;
+	font-weight: 800;
+	color: #000;	
+	line-height: 60px;
+	text-transform: uppercase;
+}
+
+#refresh p {
+	font-size: 20px;
+	
+
+}
+
+#share {
+	position: absolute;
+	bottom: 25px;
+	right: 25px;
+
+}
+
+#famous {
+	font-family: Helvetica, arial, sans-serif;
+	font-size: 12px;
+	position: fixed;
+	bottom: 5px;
+	right: 25px;
+	color: #777777;
+
+}
+
+#webby{
+	position: fixed;
+	bottom:10px;
+	left: 15px;
+}
+
+#facebook {
+	position: fixed;
+	bottom: 15px;
+	right: 5px;
+
+}
+
+a:link {color: #000; text-decoration: none; font-weight: 800;}
+a:active {text-decoration: none;}
+a:hover {color: #000; text-decoration: underline;}
+a:visited {color: #000; text-decoration: none;}

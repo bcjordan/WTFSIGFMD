@@ -1,0 +1,23 @@
+<p>HOW ABOUT YOU FUCKING GET HER</p>
+
+<p>
+<a href="<%= @gift.url %>">
+  <%= @gift.name %>
+</a>
+</p>
+<div id='refresh'> 
+<p>
+<a href="/random">
+  SHE WOULDN'T LIKE THAT.
+</a>
+</p>
+<p>
+<a href="http://google.com">
+SHE'S GREAT, BUT  <%= (@gift.price.to_f / 100).truncate %> DOLLARS IS TOO FUCKING MUCH.
+</a>
+</p>
+</div>
+
+  <%= link_to "Edit", edit_gift_path(@gift) %> |
+  <%= link_to "Destroy", @gift, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", gifts_path %>

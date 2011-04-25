@@ -3,6 +3,13 @@ class GiftsController < ApplicationController
     @gifts = Gift.all
   end
 
+  def random
+    # Consider already-seen gifts
+    # Consider price range
+    # Pick random gift from Gift.all 
+    @gift = Gift.find :first, :offset => ( Gift.count * rand ).to_i 
+  end
+
   def show
     @gift = Gift.find(params[:id])
   end
