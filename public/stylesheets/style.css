@@ -16,38 +16,13 @@ p {
 	text-transform: uppercase;
 }
 
-dt {
-	font-family: Helvetica, Arial, sans-serif;
-	font-size: 60px;
-	font-weight: 800;
-	color: #000;	
-	line-height: 60px;
-	text-transform: uppercase;
-}
-
-dl {
-	font-family: Helvetica, Arial, sans-serif;
-	font-size: 60px;
-	font-weight: 800;
-	color: #000;	
-	line-height: 60px;
-	text-transform: uppercase;
-}
-
-#refresh p {
+#choices p {
 	font-size: 20px;
 	
 
 }
 
-#share {
-	position: absolute;
-	bottom: 25px;
-	right: 25px;
-
-}
-
-#famous {
+#wtfsimfdlink {
 	font-family: Helvetica, arial, sans-serif;
 	font-size: 12px;
 	position: fixed;
@@ -58,16 +33,10 @@ dl {
 
 }
 
-#webby{
-	position: fixed;
-	bottom:10px;
-	left: 15px;
-}
-
 #facebook {
 	position: fixed;
-	bottom: 40px;
-	right: 15px;
+	bottom: 60px;
+	right: -5px;
 
 }
 
