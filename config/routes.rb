@@ -1,4 +1,5 @@
 Wtfmom2::Application.routes.draw do
+  root :to => "gifts#random"
   match 'user/edit' => 'users#edit', :as => :edit_current_user
 
   match 'signup' => 'users#new', :as => :signup
@@ -6,8 +7,6 @@ Wtfmom2::Application.routes.draw do
   match 'logout' => 'sessions#destroy', :as => :logout
 
   match 'login' => 'sessions#new', :as => :login
-
-  match 'random' => 'gifts#random', :as => :random
 
   resources :sessions
 
@@ -64,7 +63,6 @@ Wtfmom2::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "gift#random"
 
   # See how all your routes lay out with "rake routes"
 
