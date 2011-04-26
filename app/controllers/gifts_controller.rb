@@ -5,9 +5,20 @@ class GiftsController < ApplicationController
 
   def random
     # Consider already-seen gifts
-    # Consider price range
+    # Save price range
     # Pick random gift from Gift.all 
-    @gift = Gift.find :first, :offset => ( Gift.count * rand ).to_i 
+    cheap = params[:cheapbastard]
+    if (cheap.nil?)
+      cheap = 100*1000 - 1
+    else
+      cheap = Integer(cheap)*100 - 1
+    end
+    puts "Cheap: "
+    puts cheap
+    @gift = Gift.find :first, :order => "RANDOM() DESC", :conditions => ["price < ?", cheap]
+    if (@gift.nil?)
+      redirect_to "/youMustNotLoveYourMom/"
+    end
   end
 
   def show
