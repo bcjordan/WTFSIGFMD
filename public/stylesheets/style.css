@@ -54,6 +54,7 @@ dl {
 	bottom: 5px;
 	right: 25px;
 	color: #777777;
+        text-align: right;
 
 }
 
@@ -65,8 +66,8 @@ dl {
 
 #facebook {
 	position: fixed;
-	bottom: 15px;
-	right: 5px;
+	bottom: 40px;
+	right: 15px;
 
 }
 
