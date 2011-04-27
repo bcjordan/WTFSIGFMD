@@ -16,8 +16,10 @@ p {
 
 #choices p {
 	font-size: 20px;
-	
+}
 
+.smaller a {
+	font-size: 14px;
 }
 
 #wtfsimfdlink {

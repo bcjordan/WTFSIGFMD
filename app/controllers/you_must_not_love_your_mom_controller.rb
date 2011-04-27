@@ -1,0 +1,2 @@
+class YouMustNotLoveYourMomController < ApplicationController
+end

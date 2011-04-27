@@ -10,8 +10,12 @@ class GiftsController < ApplicationController
     cheap = params[:cheapbastard]
     if (cheap.nil?)
       cheap = 100*1000 - 1
+      if (! cookies[:cheapbastard].nil?)
+        cheap = Integer(cookies[:cheapbastard])
+      end
     else
       cheap = Integer(cheap)*100 - 1
+      cookies[:cheapbastard] = cheap
     end
     puts "Cheap: "
     puts cheap

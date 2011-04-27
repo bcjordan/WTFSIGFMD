@@ -8,6 +8,8 @@ Wtfmom2::Application.routes.draw do
 
   match 'login' => 'sessions#new', :as => :login
 
+  match 'youMustNotLoveYourMom' => 'you_must_not_love_your_mom#index'
+
   resources :sessions
 
   resources :users
