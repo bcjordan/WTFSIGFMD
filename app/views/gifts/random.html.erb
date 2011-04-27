@@ -1,12 +1,28 @@
-<p>HOW ABOUT YOU FUCKING GET HER</p>
-
+<p>
+<%=
+	randomize(
+		"HOW ABOUT YOU FUCKING GET HER",
+		"IF YOU LOVE YOUR MOM YOU'LL FUCKING BUY A",
+		"SHE'S GOING TO FUCKING LOVE HER NEW",
+		"BUY THIS, DIPSHIT:"
+	)
+%>
+</p>
 <p>
 <a href="<%= @gift.url %>">
   <%= @gift.name %>
 </a>
 </p>
 <div id="choices"> 
-  <p><a href=".">SHE WON'T FUCKING LIKE THAT.</a></p>
+  <p><a href=".">
+		<%=
+			randomize(
+				"SHE WON'T FUCKING LIKE THAT.",
+				"SHE'LL HATE IT.",
+				"I'D RATHER SEE GRANDMA NAKED IN THE SHOWER"
+			)
+		%>
+	</a></p>
 <p>
 
 </p>
@@ -15,6 +31,7 @@
 LOVE HER, BUT  <%= (@gift.price.to_f / 100).truncate %> DOLLARS IS TOO FUCKING MUCH.
 </a>
 </p>
+<br>
 <p class="smaller">
 <%
 	if (!cookies[:cheapbastard].nil? && Integer(cookies[:cheapbastard]) < 10000)%>
@@ -26,12 +43,4 @@ LOVE HER, BUT  <%= (@gift.price.to_f / 100).truncate %> DOLLARS IS TOO FUCKING M
 </p>
 </div>
 
-<div id="facebook"> 
-  <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FWhat-the-Fuck-Should-I-Get-For-Mothers-Day%2F116040201810390&amp;width=292&amp;colorscheme=light&amp;show_faces=false&amp;stream=false&amp;header=true&amp;height=62" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:292px; height:72px;" allowTransparency="true"></iframe>
-</div> 
- 
-<div id="wtfsimfdlink"> 
-  Collecting data for the <a href="http://www.guessagift.com">Gift Prediction Engine</a><br/> machine learning project.
-  Based off of <a href="http://wtfsimfd.com">this</a> <br/> awesome fucking website fucking made by <a href="http://www.zachgolden.com">Zach</a>.
-</div> 
 
