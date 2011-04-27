@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= content_for?(:title) ? yield(:title) : "What the Fuck Should I Get For Mother's Day?" %></title>
-    <%= stylesheet_link_tag "style" %>
-    <%= csrf_meta_tag %>
-    <%= yield(:head) %>
-  </head>
+<head>
+<title><%= content_for?(:title) ? yield(:title) : "What the Fuck Should I Get For Mother's Day?" %></title>
+<%= stylesheet_link_tag "style" %>
+<%= csrf_meta_tag %>
+<%= yield(:head) %>
+</head>
   <body>
     <div id="container">
       <% flash.each do |name, msg| %>
