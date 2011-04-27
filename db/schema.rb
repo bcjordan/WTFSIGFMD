@@ -13,20 +13,20 @@
 ActiveRecord::Schema.define(:version => 20110425155316) do
 
   create_table "gifts", :force => true do |t|
-    t.string   "name"
-    t.string   "url"
-    t.integer  "price"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "name"
+    t.string    "url"
+    t.integer   "price"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "users", :force => true do |t|
-    t.string   "username"
-    t.string   "email"
-    t.string   "password_hash"
-    t.string   "password_salt"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "username"
+    t.string    "email"
+    t.string    "password_hash"
+    t.string    "password_salt"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
 end

@@ -4,25 +4,19 @@ class GiftsController < ApplicationController
   end
 
   def random
-    # Consider already-seen gifts
-    # Save price range
-    # Pick random gift from Gift.all 
-    cheap = params[:cheapbastard]
-    if (cheap.nil?)
-      cheap = 100*1000 - 1
-      if (! cookies[:cheapbastard].nil?)
-        cheap = Integer(cookies[:cheapbastard])
-      end
-    else
-      cheap = Integer(cheap)*100 - 1
-      cookies[:cheapbastard] = cheap
+    @cheap = params[:cheapbastard]
+
+    if @cheap && (@cheap.to_i <= 11) # minimum cheapness
+      @incrediblycheap = true      # change link to raise price rather than lower
+      @cheap = 12                   # set cheapness to 11 dollars
     end
-    puts "Cheap: "
-    puts cheap
-    @gift = Gift.find :first, :order => "RANDOM() DESC", :conditions => ["price < ?", cheap]
-    if (@gift.nil?)
-      redirect_to "/youMustNotLoveYourMom/"
-    end
+
+    @cheap = 500 unless @cheap
+
+    @gift = Gift.find :first, :order => "RANDOM() DESC", 
+                      :conditions => ["price <= ?", @cheap.to_i * 100]
+
+    @cheap = nil if @cheap == 500 # Want empty link
   end
 
   def show
@@ -34,9 +28,9 @@ class GiftsController < ApplicationController
   end
 
   def create
-    @gift = Gift.new(params[:gift])
+    @gift = Gift.new(params[:gift]) # TODO: comment out or authenticate
     if @gift.save
-      redirect_to @gift, :notice => "Successfully created gift."
+      redirect_to @gift, :notice => "Successfully created gift." # Taunt
     else
       render :action => 'new'
     end
@@ -48,8 +42,8 @@ class GiftsController < ApplicationController
 
   def update
     @gift = Gift.find(params[:id])
-    if @gift.update_attributes(params[:gift])
-      redirect_to @gift, :notice  => "Successfully updated gift."
+    if @gift.update_attributes(params[:gift]) # TODO: comment out / auth
+      redirect_to @gift, :notice  => "Successfully updated gift." # Taunt
     else
       render :action => 'edit'
     end
@@ -57,7 +51,7 @@ class GiftsController < ApplicationController
 
   def destroy
     @gift = Gift.find(params[:id])
-    @gift.destroy
-    redirect_to gifts_url, :notice => "Successfully destroyed gift."
+    @gift.destroy # TODO: comment out or authenticate
+    redirect_to gifts_url, :notice => "Successfully destroyed gift." # Taunt
   end
 end
