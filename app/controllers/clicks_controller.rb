@@ -47,7 +47,7 @@ class ClicksController < ApplicationController
 
     @click.save
 
-    render :layout => false
+    render :nothing => true
 =begin    
     respond_to do |format|
       if @click.save
