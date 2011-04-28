@@ -5,6 +5,12 @@
 <title><%= content_for?(:title) ? yield(:title) : "What the Fuck Should I Get For Mother's Day?" %></title>
 <%= stylesheet_link_tag "style" %>
 <%= csrf_meta_tag %>
+<meta property="og:title" content="What the Fuck Should I Get for Mother&#039;s Day" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://whatthefuckshouldigetformothersday.com" />
+<meta property="og:image" content="http://whatthefuckshouldigetformothersday.com/images/wtfmom.png" />
+<meta property="og:site_name" content="What the Fuck Should I Get for Mother&#039;s Day" />
+<meta property="fb:admins" content="1088160016" />
 <%= yield(:head) %>
 </head>
   <body>
@@ -16,7 +22,7 @@
       <%= yield %>
 
 <div id="facebook"> 
-<iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FWhat-the-Fuck-Should-I-Get-For-Mothers-Day%2F116040201810390&amp;width=292&amp;colorscheme=light&amp;show_faces=false&amp;stream=false&amp;header=true&amp;height=62" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:292px; height:72px;" allowTransparency="true"></iframe>
+  <iframe src="http://www.facebook.com/plugins/like.php?href=whatthefuckshouldigetformothersday.com&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:120px; height:21px;" allowTransparency="true"></iframe>
 </div> 
 
 <div id="wtfsimfdlink"> 
