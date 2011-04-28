@@ -5,6 +5,7 @@
 <title><%= content_for?(:title) ? yield(:title) : "What the Fuck Should I Get For Mother's Day?" %></title>
 <%= stylesheet_link_tag "style" %>
 <%= csrf_meta_tag %>
+<%= javascript_include_tag "jquery/jquery", "jquery/jquery.cookie", "jquery/jquery.md5", "application", "rails" %>
 <meta property="og:title" content="What the Fuck Should I Get for Mother&#039;s Day" />
 <meta property="og:description" content="Mother's day is May 8th, figure out what the fuck to get." />
 <meta property="og:type" content="website" />
