@@ -9,8 +9,13 @@ $(function() {
 
   $("a").live("click", function() {
     params = { click: { url: this.href } };
+		var tagString = "";
+		var amazonRegex = /amzn\.com/;
+		if (this.href.match(amazonRegex)) {
+			tagString = "?tag=savingtogetmymomakindle-20";
+		}
     $.post("/clicks", params);
-    setTimeout('document.location = "' + this.href + '"', 100);
+    setTimeout('document.location = "' + this.href + tagString + '"', 100);
     return false;
   });
 });
