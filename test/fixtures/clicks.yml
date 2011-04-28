@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  url: MyString
+  request_ip: MyString
+  user_agent: MyString
+  user_id: MyString
+
+two:
+  url: MyString
+  request_ip: MyString
+  user_agent: MyString
+  user_id: MyString
