@@ -44,3 +44,5 @@ http://www.amazon.com/Viewsonic-VFD1027w-11-10-2-Inch-Digital-Internal/dp/B0040J
 	$59.99
 http://www.amazon.com/gp/product/B0032JRRXO/ref=s9_al_bw_ir01?pf_rd_m=ATVPDKIKX0DER&pf_rd_s=center-5&pf_rd_r=18G5EDQPH6GDEJH6J0C2&pf_rd_t=101&pf_rd_p=1293834362&pf_rd_i=2737047011
 	$75.72
+http://www.amazon.com/dp/B002LSI3IU/
+	$49.99
