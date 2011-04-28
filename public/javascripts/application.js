@@ -7,15 +7,11 @@ $(function() {
     $.cookie("uid", tracking_id, { expires: 365 * 20, path: "/" });    
   }
 
-  $("a").live("click", function() {
-    params = { click: { url: this.href } };
-		var tagString = "";
-		var amazonRegex = /amzn\.com/;
-		if (this.href.match(amazonRegex)) {
-			tagString = "?tag=savingtogetmymomakindle-20";
-		}
-    $.post("/clicks", params);
-    setTimeout('document.location = "' + this.href + tagString + '"', 100);
-    return false;
+  $("a").live("mousedown", function() {
+    // params = { click: { url: this.href } };
+    // $.post("/clicks", params);
+    // setTimeout('document.location = "' + this.href + '"', 100);
+		this.href = "/clicks/?click[url]=" + encodeURIComponent(this.href);
+		// alert(this.href);
   });
 });

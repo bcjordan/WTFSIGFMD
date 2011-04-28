@@ -37,6 +37,14 @@ class ClicksController < ApplicationController
     @click = Click.find(params[:id])
   end
 
+  def addAffiliateTag(url)
+    if url.include? "amzn.com" 
+      return url + "?tag=savingtogetmymomakindle-20"
+    else
+      return url
+    end
+  end
+
   # POST /clicks
   # POST /clicks.xml
   def create
@@ -47,7 +55,8 @@ class ClicksController < ApplicationController
 
     @click.save
 
-    render :nothing => true
+    redirect_to addAffiliateTag(@click.url)
+    # render :nothing => true
 =begin    
     respond_to do |format|
       if @click.save

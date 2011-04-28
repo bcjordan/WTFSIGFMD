@@ -1,7 +1,7 @@
 Wtfmom2::Application.routes.draw do
   root :to => "gifts#random"
 
-  match 'clicks' => 'clicks#create', :via => "post"
+  match 'clicks' => 'clicks#create'
 
 #  match 'user/edit' => 'users#edit', :as => :edit_current_user
 
