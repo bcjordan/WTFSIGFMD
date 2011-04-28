@@ -6,7 +6,7 @@ class GiftsController < ApplicationController
   def random
     @cheap = params[:cheapbastard]
 
-    if @cheap && (@cheap.to_i <= 11) # minimum cheapness
+    if @cheap && (@cheap.to_i <= 12) # minimum cheapness
       @incrediblycheap = true      # change link to raise price rather than lower
       @cheap = 12                   # set cheapness to 11 dollars
     end

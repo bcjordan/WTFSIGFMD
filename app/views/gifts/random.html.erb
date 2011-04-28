@@ -1,27 +1,28 @@
 <p>
 <%=
-randomize( "HOW ABOUT YOU FUCKING GET HER",
-"IF YOU LOVE YOUR MOM YOU'LL FUCKING BUY A",
-"SHE'S GOING TO FUCKING LOVE",
-"SHE MAY UN-DISOWN YOU FOR")
-%> </p> <p> <a href="<%= @gift.url %>">
+randomize( "WHAT IF YOU FUCKING GOT HER",
+"IF YOU LOVED HER YOU'D HAVE ALREADY GOTTEN HER",
+"SHE'D FUCKING LOVE",
+"CAN YOU FUCKING IMAGINE HER RECEIVING",
+"SHE MIGHT UN-DISOWN YOU FOR")
+%> </p> <p> <a href="<%= @gift.url %>" target="_new">
   <%= @gift.name %>
 </a>
 </p>
 <div id="choices"> 
   <p><a href="/<%= "?cheapbastard=#{@cheap}" if @cheap %>">
-<%=
+    SHE WON'T FUCKING LIKE THAT.
+<%
 randomize(
 "SHE WON'T FUCKING LIKE THAT.",
 "SHE'LL FUCKING HATE IT.",
-"I'D RATHER SEE GRANDMA NAKED IN THE SHOWER"
+"I'D RATHER SEE GRANDMA NAKED IN THE SHOWER."
 )
 %>
 </a></p>
 <p>
 <% if @incrediblycheap %>
-  <a href="/">SHE'S MY FUCKING MOTHER! OF COURSE I'D SPEND MORE THAN 
-    <%= (@gift.price.to_f / 100).truncate %> DOLLARS ON HER!</a>
+  <a href="/">ONLY <%= (@gift.price.to_f / 100).truncate %> DOLLARS? SHE'S MY FUCKING MOTHER!</a>
 <% else %>
 <a href="/?cheapbastard=<%= @gift.price / 100 %>">
 LOVE HER, BUT  <%= (@gift.price.to_f / 100).truncate %> DOLLARS IS TOO FUCKING MUCH.
