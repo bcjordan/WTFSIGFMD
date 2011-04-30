@@ -9,8 +9,19 @@ randomize( "WHAT IF YOU FUCKING GOT HER",
   <%= @gift.name %>
 </a>
 </p>
+
+<div id="f7u12"> <img src="
+  <%= randomize(
+  "images/c1.png",
+  "images/c2.png",
+  "images/c3.png",
+  "images/c5.png")
+  %>" width="125">
+</div>
+
 <div id="choices"> 
-  <p><a href="/<%= "?cheapbastard=#{@cheap}" if @cheap %>">
+
+   <p> <a href="/<%= "?cheapbastard=#{@cheap}" if @cheap %>">
     SHE WON'T FUCKING LIKE THAT.
 <%
 randomize(

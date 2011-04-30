@@ -6,6 +6,7 @@
 <%= stylesheet_link_tag "style" %>
 <%= csrf_meta_tag %>
 <%= javascript_include_tag "jquery/jquery", "jquery/jquery.cookie", "jquery/jquery.md5", "application", "rails" %>
+
 <meta property="fb:admins" content="1088160016" />
 <meta property="fb:app_id" content="116040201810390" />
 <meta property="og:title" content="What the Fuck Should I Get for Mother&#039;s Day" />
@@ -15,9 +16,18 @@
 <meta property="og:image" content="http://whatthefuckshouldigetformothersday.com/images/wtfmom.png" />
 <meta property="og:site_name" content="What the Fuck Should I Get for Mother&#039;s Day" />
 
+<script type="text/javascript">
+function myscript() {
+input = 'fuck';
+output='f7u12';
+document.body.innerHTML = document.body.innerHTML.replace(input,output);
+}
+</script>
+
+
 <%= yield(:head) %>
 </head>
-  <body>
+  <body OnLoad = "myscript();">
     <div id="container">
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
@@ -55,5 +65,9 @@ Based off of <a href="http://wtfsimfd.com">this</a><br/> awesome fucking website
   })();
 
 </script>
+
+<script> (function (){ $("body *").replaceText( /fuck|fucking/gi, "FFFFFFFUUUUUUUUUUUU" ) })(); </script>
+
+
 </body>
 </html>
