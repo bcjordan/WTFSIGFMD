@@ -10,13 +10,31 @@ randomize( "WHAT IF YOU FUCKING GOT HER",
 </a>
 </p>
 
-<div id="f7u12"> <img src="
+<% 
+   session[:fuck] = "no" if (params[:fuck] == "no")
+   if (params[:fuck] == "yeah" || session[:fuck] == "yeah") 
+     session[:fuck] = "yeah"
+ %>
+  <div id="f7u12"> <img src="
   <%= randomize(
   "images/c1.png",
   "images/c2.png",
   "images/c3.png",
-  "images/c5.png")
-  %>" width="125">
+  "images/c4.png",
+  "images/c5.png",
+  "images/c6.png",
+  "images/c7.png",
+  "images/c8.png",
+  "images/c9.png",
+  "images/c0.png")
+  %>" width="125" />
+</div>
+<% end %>
+
+<div id="poker">
+  <a href="/?fuck=<%= (session[:fuck] == "yeah") ? 'no' : 'yeah'  %>">
+  <img src="http://danawesome.netau.net/images/Normal/38.png" width="50" border=0/>
+   </a>
 </div>
 
 <div id="choices"> 

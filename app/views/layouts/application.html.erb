@@ -16,14 +16,15 @@
 <meta property="og:image" content="http://whatthefuckshouldigetformothersday.com/images/wtfmom.png" />
 <meta property="og:site_name" content="What the Fuck Should I Get for Mother&#039;s Day" />
 
+<% if (params[:fuck] == "yeah" || session[:fuck] == "yeah")%>
 <script type="text/javascript">
 function myscript() {
-input = 'fuck';
+input = 'FUCK';
 output='f7u12';
 document.body.innerHTML = document.body.innerHTML.replace(input,output);
 }
 </script>
-
+<% end %>
 
 <%= yield(:head) %>
 </head>
@@ -65,9 +66,5 @@ Based off of <a href="http://wtfsimfd.com">this</a><br/> awesome fucking website
   })();
 
 </script>
-
-<script> (function (){ $("body *").replaceText( /fuck|fucking/gi, "FFFFFFFUUUUUUUUUUUU" ) })(); </script>
-
-
 </body>
 </html>
