@@ -17,13 +17,7 @@
 <meta property="og:site_name" content="What the Fuck Should I Get for Mother&#039;s Day" />
 
 <% if (params[:fuck] == "yeah" || session[:fuck] == "yeah")%>
-<script type="text/javascript">
-function myscript() {
-input = 'FUCK';
-output='f7u12';
-document.body.innerHTML = document.body.innerHTML.replace(input,output);
-}
-</script>
+<script type="text/javascript"> function myscript() {document.body.innerHTML = document.body.innerHTML.replace(/FUCK/g,'f7u12'); } </script>
 <% end %>
 
 <%= yield(:head) %>
