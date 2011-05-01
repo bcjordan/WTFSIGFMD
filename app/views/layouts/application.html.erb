@@ -27,10 +27,12 @@
 <%= yield(:head) %>
 </head>
   <body OnLoad = "myscript();">
-    <% if ((sc > 25) and (!ref.include? "reddit")) %>
-<script type="text/javascript">var _kiq = _kiq || [];</script>
-<script type="text/javascript" src="//s3.amazonaws.com/ki.js/18397/3zE.js" async="true"></script>
-    <% end %>
+    <% if ((sc > 25) and (!ref.include? "reddit")) then 
+    session[:count] = -500 if (sc > 26)
+  %>
+    <script type="text/javascript">var _kiq = _kiq || [];</script>
+    <script type="text/javascript" src="//s3.amazonaws.com/ki.js/18397/3zE.js" async="true"></script>
+<% end %>
 
 
     <div id="container">
