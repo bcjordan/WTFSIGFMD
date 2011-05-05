@@ -39,7 +39,11 @@ class ClicksController < ApplicationController
 
   def addAffiliateTag(url)
     if url.include? "amzn.com" 
-      return url + "?tag=savingtogetmymomakindle-20"
+      if (session['referer'] && session['referer'].include?("hubpages"))
+        return url + "?tag=giftids-20"
+      else 
+        return url + "?tag=savingtogetmymomakindle-20"
+      end
     else
       return url
     end
