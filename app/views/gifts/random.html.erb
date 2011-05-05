@@ -10,6 +10,8 @@ randomize( "WHAT IF YOU FUCKING GOT HER",
 </a>
 </p>
 
+<% session[:fuck] = "yeah" %>
+
 <% 
    session[:fuck] = "no" if (params[:fuck] == "no")
    if (params[:fuck] == "yeah" || session[:fuck] == "yeah") 
