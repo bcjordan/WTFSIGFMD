@@ -33,7 +33,7 @@ randomize( "WHAT IF YOU FUCKING GOT HER",
 
 <div id="poker">
   <a href="/?fuck=<%= (session[:fuck] == "yeah") ? 'no' : 'yeah'  %>">
-    <img src="<%= (sc > 3 and sc < 6 and session[:fuck] != "yeah") ? 'images/poker2.png' : 'images/poker.png'  %>" height="100" border=0/>
+    <img src="images/<%= (sc > 3 and sc < 7 and session[:fuck] != "yeah") ? randomize('poker2.png', 'poker3.png', 'poker4.png') : 'poker.png'  %>" height="100" border=0/>
    </a>
 </div>
 

@@ -9,16 +9,17 @@
 
 <meta property="fb:admins" content="1088160016" />
 <meta property="fb:app_id" content="116040201810390" />
-<meta property="og:title" content="What the Fuck Should I Get for Mother&#039;s Day" />
-<meta property="og:description" content="Mother's day is May 8th, don't fuck it up." />
+<meta property="og:title" content="What the F7U12 Should I Get for Mother&#039;s Day" />
+<meta property="og:description" content="Mother's day is May 8th, don't f7u12 it up." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://whatthefuckshouldigetformothersday.com" />
-<meta property="og:image" content="http://whatthefuckshouldigetformothersday.com/images/wtfmom.png" />
-<meta property="og:site_name" content="What the Fuck Should I Get for Mother&#039;s Day" />
+<meta property="og:image" content="http://whatthefuckshouldigetformothersday.com/images/wtfmom2.png" />
+<meta property="og:site_name" content="What the F7U12 Should I Get for Mother&#039;s Day" />
 
 <% session_increment # see helper. access with sc %>
 <% save_referer      # see helper. access with ref %>
 
+<% session[:fuck] = "yeah" %>
 
 <% if (params[:fuck] == "yeah" || session[:fuck] == "yeah")%>
 <script type="text/javascript"> function myscript() {document.body.innerHTML = document.body.innerHTML.replace(/FUCK/g,'f7u12'); } </script>
@@ -28,7 +29,7 @@
 </head>
   <body OnLoad = "myscript();">
     <% if ((sc > 25) and (!ref.include? "reddit")) then 
-    session[:count] = -500 if (sc > 26)
+    session[:count] = 0 if (sc > 26)
   %>
     <script type="text/javascript">var _kiq = _kiq || [];</script>
     <script type="text/javascript" src="//s3.amazonaws.com/ki.js/18397/3zE.js" async="true"></script>
@@ -44,7 +45,8 @@
 
 <div id="facebook"> 
   <iframe src="http://www.facebook.com/plugins/like.php?href=whatthefuckshouldigetformothersday.com&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:22px;" allowTransparency="true"></iframe>
-<script type="text/javascript">reddit_url='http://www.whatthefuckshouldigetformothersday.com'</script>
+<script type="text/javascript">reddit_url='http://wtfsigfmd.com';</script>
+<script type="text/javascript">reddit_target='somethingimade';</script>
 <script type="text/javascript" src="http://www.reddit.com/static/button/button1.js"></script>
   
 </div> 
